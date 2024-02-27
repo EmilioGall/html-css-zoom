@@ -12,6 +12,8 @@
     --grey-p: rgba(74, 74, 74, 1);
     --red-p: rgba(255, 25, 48, 1);
     --green-p: rgba(75, 200, 0, 1);
+
+    --height-p: 8rem;
 }
 
 a {
@@ -20,7 +22,7 @@ a {
 }
 
 img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
 }
 
@@ -33,7 +35,7 @@ li {
 
 .container {
     margin: 0px auto;
-    width: 80%;
+    width: 90%;
     min-width: 820px;
 }
 
@@ -60,12 +62,24 @@ li {
 
 /* Utilities */
 
+.pad-g-b {
+    padding: .5em .5em;
+}
+
 .pad-v-20 {
     padding: 20px 0px;
 }
 
 .pad-v-10 {
     padding: 10px 0px;
+}
+
+.pad-h-10 {
+    padding: 0px 10px;
+}
+
+.marg-s-10 {
+    margin: 0px 10px;
 }
 
 .marg-l-10 {
@@ -117,4 +131,28 @@ body {
 
 .bg-d {
     background-color: var(--dark-p);
+}
+
+
+/* MAIN */
+
+main {
+    background-color: black;
+
+    /* Debug */
+    height: calc(100vh - var(--height-p));
+}
+
+.button {
+    height: 25px;
+    border-radius: 5px;
+}
+
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--dark-p);
+    height: var(--height-p);
 }
