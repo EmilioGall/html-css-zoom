@@ -1,11 +1,4 @@
 /* RESET */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
     --white-p: rgba(224, 224, 224, 1);
     --dark-p: rgba(34, 34, 34, 1);
@@ -13,8 +6,16 @@
     --red-p: rgba(255, 25, 48, 1);
     --green-p: rgba(75, 200, 0, 1);
 
-    --height-p: 5rem;
+    --height-p: 4rem;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white-p);
+}
+
 
 a {
     color: inherit;
@@ -35,9 +36,11 @@ li {
 
 .container {
     margin: 0px auto;
-    width: 90%;
-    min-width: 820px;
+    width: 92%;
+    min-width: 845px;
 }
+
+/* Flex-container */
 
 .flex {
     display: flex;
@@ -59,11 +62,20 @@ li {
     align-items: center;
 }
 
+/* Position */
+
+.rel {
+    position: relative;
+}
 
 /* Utilities */
 
-.pad-g-b {
-    padding: .5em .5em;
+.pad-g-10 {
+    padding: 10px;
+}
+
+.pad-g-5 {
+    padding: 5px;
 }
 
 .pad-v-20 {
@@ -118,7 +130,7 @@ body {
 }
 
 .txt-20 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 
@@ -130,6 +142,10 @@ body {
 
 .txt-r {
     color: var(--red-p);
+}
+
+.txt-g {
+    color: var(--green-p);
 }
 
 .bg-w {
@@ -165,23 +181,34 @@ main {
 
 .grid {
     flex-wrap: wrap;
-    justify-content: space-between;
     height: calc(100vh - (var(--height-p) + (var(--height-p)/2) + 20px));
+    width: calc(100vw - 8%);
+    overflow-x: auto;
+    /* overflow: hidden; */
 }
 
 .cam {
-    width: calc((100%/6) - 5px);   
-
-    /* Debug */
-    background-color: lightseagreen;
-    border: 1px dashed black;
-    min-height: 100px;
+    width: calc(100%/6);
+    min-width: 140px;
+    height: calc(100%/4.05);
+    padding: 5px;
 }
 
 .cam img {
-    object-fit:fill;
+    object-fit: cover;
+    height: 100%;
 }
 
+.overlay {
+    width: 70%;
+    min-width: 140px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, .7);
+    position: absolute;
+    bottom: 10px;
+    left: 0px;
+    z-index: 1;
+}
 
 
 /* FOOTER */
@@ -189,4 +216,29 @@ main {
 footer {
     background-color: var(--dark-p);
     height: var(--height-p);
+}
+
+.mic-cam-sect i,
+.tools-bar-sect i {
+    padding-bottom: 5px;
+}
+
+.mic-cam-sect {
+    width: 15%;
+}
+
+.tools-bar-sect {
+    width: 70%;
+}
+
+.end-call-sect {
+    width: 15%;
+    text-align: end;
+    height: 100%;
+}
+
+.big-btn {
+    height: var(--height-p);
+    line-height: var(--height-p);
+    border-radius: 5px;
 }
