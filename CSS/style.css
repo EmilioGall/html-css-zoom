@@ -13,7 +13,7 @@
     --red-p: rgba(255, 25, 48, 1);
     --green-p: rgba(75, 200, 0, 1);
 
-    --height-p: 8rem;
+    --height-p: 5rem;
 }
 
 a {
@@ -78,8 +78,19 @@ li {
     padding: 0px 10px;
 }
 
-.marg-s-10 {
-    margin: 0px 10px;
+.marg-h-10 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.marg-v-10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.marg-v-5 {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .marg-l-10 {
@@ -143,9 +154,32 @@ main {
     height: calc(100vh - var(--height-p));
 }
 
+.views-tools {
+    height: calc(var(--height-p)/2);
+}
+
 .button {
     height: 25px;
     border-radius: 5px;
+}
+
+.grid {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: calc(100vh - (var(--height-p) + (var(--height-p)/2) + 20px));
+}
+
+.cam {
+    width: calc((100%/6) - 5px);   
+
+    /* Debug */
+    background-color: lightseagreen;
+    border: 1px dashed black;
+    min-height: 100px;
+}
+
+.cam img {
+    object-fit:fill;
 }
 
 
